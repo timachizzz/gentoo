@@ -190,7 +190,7 @@ CFLAGS="${COMMON_FLAGS}"
 CXXFLAGS="${COMMON_FLAGS}"
 FCFLAGS="${COMMON_FLAGS}"
 FFLAGS="${COMMON_FLAGS}"
-MAKEOPTS="-j4 -l8"
+MAKEOPTS="-j8 -l8"
 USE="-systemd"
 ACCEPT_LICENSE="*"
 
@@ -201,6 +201,10 @@ ACCEPT_LICENSE="*"
 LC_MESSAGES=C.UTF-8
 ```
 ### Press `Ctrl + O`, `Enter`, `Ctrl + X`
+
+---
+
+# *50% is complete! Keep it up :)*
 
 ---
 
@@ -333,10 +337,6 @@ Available targets for the LANG variable:
 
 ---
 
-# *50% is complete! Keep it up :)*
-
----
-
 # Installing firmware and microcode
 ## 1. Firmware:
 ### Most wireless cards and GPUs require firmware to function.
@@ -394,7 +394,7 @@ Available kernel symlink targets:
 ```
 ### Add first line with your `/dev/efi_system_partition`: (/dev/sda1 for example):
 ```commandline
-/dev/sda1               /boot/efi       vfat            defaults        0 2
+/dev/sda1               /efi       vfat            defaults        0 2
 ```
 ### Add second line with your `/dev/root_partition`: (/dev/sda2 for example):
 ```commandline
@@ -423,7 +423,7 @@ Available kernel symlink targets:
 #UUID=58e72203-57d1-4497-81ad-97655bd56494              /               xfs             defaults                0 1
 #LABEL=swap             none            swap            sw              0 0
 #/dev/cdrom             /mnt/cdrom      auto            noauto,ro       0 0
-/dev/sda1               /boot/efi       vfat            defaults        0 2
+/dev/sda1               /efi            vfat            defaults        0 2
 /dev/sda2               /               ext4            noatime         0 1
 ```
 ### Press `Ctrl + O`, `Enter`, `Ctrl + X`
